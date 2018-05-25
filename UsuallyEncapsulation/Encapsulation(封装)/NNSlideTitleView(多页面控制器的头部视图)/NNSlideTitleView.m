@@ -25,6 +25,9 @@
 /** 把所有视图放在 UIScrollView 中*/
 @property (nonatomic, strong) UIScrollView *scrollView;
 
+/** 是否开启滑动效果*/
+@property (nonatomic, assign) BOOL scrollEnabled;
+
 @end
 
 @implementation NNSlideTitleView
@@ -90,6 +93,10 @@
     }];
     NNButton *lastButton = self.buttonArray[self.buttonArray.count-1];
     self.scrollView.contentSize = CGSizeMake(CGRectGetMaxX(lastButton.frame)+15, self.scrollView.frame.size.height);
+    if (self.scrollView.contentSize.width > self.frame.size.width) {
+        self.scrollEnabled = YES;
+        self.scrollView.scrollEnabled = YES;
+    }
     if (self.slideTitleViewType == NNLineType) {
         [self createSliderLineView:buttonW];
     }

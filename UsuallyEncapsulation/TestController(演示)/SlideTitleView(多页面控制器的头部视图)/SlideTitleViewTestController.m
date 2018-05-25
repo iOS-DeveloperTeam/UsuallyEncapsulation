@@ -69,7 +69,6 @@
 - (void)adaptiveArrayLength {
     NSArray *dataArray = @[@"今日头条", @"优酷", @"百词斩" , @"简书", @"网易云音乐", @"思维导图", @"keep", @"知乎", @"滴滴出行", @"喜马拉雅", @"268网校"];
     NNSlideTitleView *titleView = [[NNSlideTitleView alloc] initWithFrame:CGRectMake(0, 500, SCREEN_WIDTH, 35) titleArray:dataArray];
-    titleView.scrollEnabled = YES;
     titleView.scale = 1.1;
     titleView.buttonCustomWidth = NNCustomTextWidth;
     titleView.slideTitleViewType = NNBackgroundColorType;
@@ -81,7 +80,6 @@
     
     NNSlideTitleView *titleView1 = [[NNSlideTitleView alloc] initWithFrame:CGRectMake(0, 600, SCREEN_WIDTH, 35) titleArray:dataArray];
     titleView1.buttonCustomWidth = NNCustomTextWidth;
-    titleView1.scrollEnabled = YES;
     titleView1.selectedTag = 5;
     titleView1.buttonSelected = ^(NSInteger index) {
         NSLog(@"block: 你点击了第 %ld 个按钮", index+1);
