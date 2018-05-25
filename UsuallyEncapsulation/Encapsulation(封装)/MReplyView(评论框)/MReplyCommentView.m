@@ -189,6 +189,8 @@ static MReplyCommentView *view = nil;
 }
 
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.textView removeObserver:self forKeyPath:@"contentSize"];
     NSLog(@"---%@---release", [self class]);
 }
 
