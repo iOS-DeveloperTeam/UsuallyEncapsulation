@@ -25,9 +25,6 @@
 /** 把所有视图放在 UIScrollView 中*/
 @property (nonatomic, strong) UIScrollView *scrollView;
 
-/** 是否开启滑动效果*/
-@property (nonatomic, assign) BOOL scrollEnabled;
-
 @end
 
 @implementation NNSlideTitleView
@@ -43,13 +40,12 @@
         self.buttonCustomWidth = NNAverageWidth;
         self.titleArray = titleArray;
         self.normalColor = [UIColor blackColor];
-        self.selectColor = [UIColor redColor];
+        self.selectColor = [UIColor blueColor];
         self.buttonFont = 15;
+        self.scrollEnabled = NO;
         self.scale = 1.0;
         self.selectedTag = 0;
-        self.scrollEnabled = NO;
         self.buttonBackgroundColor = [UIColor whiteColor];
-        [self registerForKVO];
     }
     return self;
 }
@@ -93,12 +89,11 @@
     }];
     NNButton *lastButton = self.buttonArray[self.buttonArray.count-1];
     self.scrollView.contentSize = CGSizeMake(CGRectGetMaxX(lastButton.frame)+15, self.scrollView.frame.size.height);
-    if (self.scrollView.contentSize.width > self.frame.size.width) {
-        self.scrollEnabled = YES;
-        self.scrollView.scrollEnabled = YES;
-    }
     if (self.slideTitleViewType == NNLineType) {
         [self createSliderLineView:buttonW];
+    }
+    if (CGRectGetMaxX(lastButton.frame) > SCREEN_WIDTH) {
+        self.scrollEnabled = YES;
     }
     
     if (self.selectedTag < self.buttonArray.count) {
@@ -119,16 +114,16 @@
     }
     
     if (self.sliderWidthType == NNTextWidth || self.buttonCustomWidth == NNCustomTextWidth) {
-            buttonW = [self boundingRectWithContentString:self.titleArray[self.selectedTag] size:CGSizeMake(MAXFLOAT, self.scrollView.frame.size.height)].width;
+        buttonW = [self boundingRectWithContentString:self.titleArray[self.selectedTag] size:CGSizeMake(MAXFLOAT, self.scrollView.frame.size.height)].width;
     }
-
+    
     NNButton *selectedButton = self.buttonArray[self.selectedTag];
     [self.scrollView addSubview:self.sliderLineView];
     [self.sliderLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(buttonW);
         make.height.mas_equalTo(2);
         make.centerX.equalTo(selectedButton);
-        make.bottom.equalTo(self);
+        make.bottom.equalTo(self).offset(-1);
     }];
 }
 
@@ -147,7 +142,7 @@
             button.backgroundColor = [UIColor whiteColor];
         }
     }];
-
+    
     // block
     if (self.buttonSelected) {
         self.buttonSelected(sender.tag);
@@ -175,7 +170,7 @@
             make.width.mas_equalTo(width);
             make.height.mas_equalTo(2);
             make.centerX.equalTo(sender);
-            make.bottom.equalTo(self);
+            make.bottom.equalTo(self).offset(-1);
         }];
     }
     
@@ -196,6 +191,14 @@
     }
     CGPoint offset = CGPointMake(offsetx, self.scrollView.contentOffset.y);
     [self.scrollView setContentOffset:offset animated:YES];
+}
+
+- (void)setSelectedTag:(NSUInteger)selectedTag {
+    _selectedTag = selectedTag;
+    if (self.buttonArray && self.self.buttonArray.count > selectedTag) {
+        NNButton *button = self.buttonArray[selectedTag];
+        [self titleButtonClicked:button];
+    }
 }
 
 #pragma mark - 封装的一些私有方法
@@ -253,32 +256,6 @@
         _buttonArray = [NSMutableArray array];
     }
     return _buttonArray;
-}
-
-#pragma mark - KVO 监听属性变化, 一旦变化, 刷新界面
-- (void)registerForKVO {
-    for (NSString *keyPath in [self observableKeypaths]) {
-        [self addObserver:self forKeyPath:keyPath options:NSKeyValueObservingOptionNew context:NULL];
-    }
-}
-
-- (void)unregisterFromKVO {
-    for (NSString *keyPath in [self observableKeypaths]) {
-        [self removeObserver:self forKeyPath:keyPath];
-    }
-}
-
-- (NSArray *)observableKeypaths {
-    return [NSArray arrayWithObjects:@"sliderWidthType", @"slideTitleViewType", @"buttonCustomWidth", @"scale", @"buttonFont", @"selectedTag", @"selectColor", @"normalColor", @"scrollEnabled", @"buttonBackgroundColor", nil];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-}
-
-- (void)dealloc {
-    [self unregisterFromKVO];
 }
 
 @end

@@ -60,6 +60,9 @@ typedef NS_ENUM (NSUInteger, NNButtonCustomWidth) {
 /** 选中第几个按钮*/
 @property (nonatomic, assign) NSUInteger selectedTag;
 
+/** 是否开启滑动效果(默认不开启)*/
+@property (nonatomic, assign) BOOL scrollEnabled;
+
 /**  按钮的背景色(默认白色) */
 @property (nonatomic, strong) UIColor *buttonBackgroundColor;
 
