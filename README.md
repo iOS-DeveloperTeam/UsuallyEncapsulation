@@ -1,4 +1,4 @@
-## 这里存放一些封装的常用组件, 便于 iOS 组内部使用;
+# 这里存放一些封装的常用组件, 便于 iOS 组内部使用;
 
 ### 星星视图
 
@@ -143,3 +143,10 @@
 - 监听键盘高度的评论框效果图
 
 ![监听键盘高度的评论框](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/演示图/07监听键盘高度的评论框.gif)
+
+
+
+
+# License
+
+This repositorie is released under the under [MIT License](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/LICENSE)
