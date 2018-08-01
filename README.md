@@ -160,6 +160,10 @@ runningLightView.runningLightBlock = ^(NSInteger index) {
 };
 ```
 
+- 跑马灯效果图
+
+![跑马灯效果图](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/演示图/08跑马灯.gif)
+
 
 
 # License
