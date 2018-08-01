@@ -36,6 +36,8 @@
 		6D4776AB20B44F2E00E2DA82 /* ValidationViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D47769820B44F2E00E2DA82 /* ValidationViewTestController.m */; };
 		6D4776AD20B44F3D00E2DA82 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6D4776AC20B44F3C00E2DA82 /* README.md */; };
 		C932FAB7BBF35C2E1428C53C /* libPods-UsuallyEncapsulation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF1ED4AA247BE894A12B1E /* libPods-UsuallyEncapsulation.a */; };
+		E30A313E2111F2F40076152F /* NNRunningLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A313D2111F2F40076152F /* NNRunningLightView.m */; };
+		E30A31422111F3320076152F /* NNRunningLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A31412111F3320076152F /* NNRunningLightController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		6D4776AC20B44F3C00E2DA82 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6D4776AE20B44F5800E2DA82 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B26B1FC4459E354AFC34237 /* Pods-UsuallyEncapsulation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsuallyEncapsulation.release.xcconfig"; path = "Pods/Target Support Files/Pods-UsuallyEncapsulation/Pods-UsuallyEncapsulation.release.xcconfig"; sourceTree = "<group>"; };
+		E30A313C2111F2F30076152F /* NNRunningLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNRunningLightView.h; sourceTree = "<group>"; };
+		E30A313D2111F2F40076152F /* NNRunningLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNRunningLightView.m; sourceTree = "<group>"; };
+		E30A31402111F3320076152F /* NNRunningLightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNRunningLightController.h; sourceTree = "<group>"; };
+		E30A31412111F3320076152F /* NNRunningLightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNRunningLightController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 		6D47766520B44F2D00E2DA82 /* Encapsulation(封装) */ = {
 			isa = PBXGroup;
 			children = (
+				E30A313B2111F2F30076152F /* NNRunningLightView(跑马灯) */,
 				6D47766620B44F2D00E2DA82 /* MCalendar(日历) */,
 				6D47767020B44F2D00E2DA82 /* MReplyView(评论框) */,
 				6D47767320B44F2D00E2DA82 /* MStarView(星星视图) */,
@@ -282,6 +289,7 @@
 		6D47768320B44F2E00E2DA82 /* TestController(演示) */ = {
 			isa = PBXGroup;
 			children = (
+				E30A313F2111F3170076152F /* NNRunningLightView(跑马灯) */,
 				6D47768420B44F2E00E2DA82 /* Calendar(日历) */,
 				6D47768720B44F2E00E2DA82 /* MReplyView(评论框) */,
 				6D47768A20B44F2E00E2DA82 /* SlideTitleView(多页面控制器的头部视图) */,
@@ -354,6 +362,24 @@
 				6D47769820B44F2E00E2DA82 /* ValidationViewTestController.m */,
 			);
 			path = "ValidationView(随机图片验证码)";
+			sourceTree = "<group>";
+		};
+		E30A313B2111F2F30076152F /* NNRunningLightView(跑马灯) */ = {
+			isa = PBXGroup;
+			children = (
+				E30A313C2111F2F30076152F /* NNRunningLightView.h */,
+				E30A313D2111F2F40076152F /* NNRunningLightView.m */,
+			);
+			path = "NNRunningLightView(跑马灯)";
+			sourceTree = "<group>";
+		};
+		E30A313F2111F3170076152F /* NNRunningLightView(跑马灯) */ = {
+			isa = PBXGroup;
+			children = (
+				E30A31402111F3320076152F /* NNRunningLightController.h */,
+				E30A31412111F3320076152F /* NNRunningLightController.m */,
+			);
+			path = "NNRunningLightView(跑马灯)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,8 +554,10 @@
 				6D47763F20B44D4900E2DA82 /* AppDelegate.m in Sources */,
 				6D47765020B44D4900E2DA82 /* main.m in Sources */,
 				6D47769F20B44F2E00E2DA82 /* MReplyCommentView.m in Sources */,
+				E30A31422111F3320076152F /* NNRunningLightController.m in Sources */,
 				6D4776A220B44F2E00E2DA82 /* NNTextView.m in Sources */,
 				6D4776A820B44F2E00E2DA82 /* StarViewTestController.m in Sources */,
+				E30A313E2111F2F40076152F /* NNRunningLightView.m in Sources */,
 				6D47769B20B44F2E00E2DA82 /* MCalendarView.m in Sources */,
 				6D4776AA20B44F2E00E2DA82 /* ValidationCodeViewTestController.m in Sources */,
 				6D47764820B44D4900E2DA82 /* UsuallyEncapsulation.xcdatamodeld in Sources */,

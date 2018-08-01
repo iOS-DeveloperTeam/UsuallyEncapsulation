@@ -1,0 +1,13 @@
+//
+//  NNRunningLightController.h
+//  UsuallyEncapsulation
+//
+//  Created by 刘朋坤 on 2018/8/1.
+//  Copyright © 2018年 LiuPengKun. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+@interface NNRunningLightController : BaseViewController
+
+@end

@@ -145,6 +145,21 @@
 ![监听键盘高度的评论框](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/演示图/07监听键盘高度的评论框.gif)
 
 
+### 跑马灯效果
+
+- 实现了轻量级的跑马灯效果，用 `CADisplayLink` 加了定时器，实时改变显示文本的位置，当然也可以是图片，也可以从左到右，甚至从上到下，从下到上，原理相同。
+
+```
+NNRunningLightView *runningLightView = [[NNRunningLightView alloc] initWithFrame:CGRectMake(100, 100, 200, 30)];
+runningLightView.backgroundColor = [UIColor lightGrayColor];
+[self.view addSubview:runningLightView];
+NSArray *tempArray = @[@"大江东去", @"浪淘尽浪淘尽浪淘尽浪淘尽浪淘尽浪淘尽", @"千古风流人物"];
+runningLightView.marqueeTextArray = tempArray;
+runningLightView.runningLightBlock = ^(NSInteger index) {
+    NSLog(@"%@", tempArray[index]);
+};
+```
+
 
 
 # License
