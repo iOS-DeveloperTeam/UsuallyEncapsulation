@@ -165,6 +165,23 @@ runningLightView.runningLightBlock = ^(NSInteger index) {
 ![跑马灯效果图](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/演示图/08跑马灯.gif)
 
 
+### 选择器
+
+- 简单的选择器封装
+
+```
+    self.pickerView = [[NNPickerView alloc] initWithDataArr:self.dataSource];
+    [self.pickerView setSelectIndex:10];
+    self.pickerView.selectBlock = ^(NSString *string, NSInteger index) {
+        NSLog(@"string = %@ ,index = %ld", string,  index);
+    };
+```
+
+- 效果图
+
+![选择器效果图](https://github.com/iOS-DeveloperTeam/UsuallyEncapsulation/blob/master/演示图/09选择器.gif)
+
+
 
 # License
 
