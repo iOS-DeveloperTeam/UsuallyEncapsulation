@@ -66,14 +66,14 @@ static NSString *UITableViewCellID = @"UITableViewCellID";
 
 - (NSArray *)titleArray {
     if (!_titleArray) {
-        _titleArray = @[@"星星视图", @"多页面控制器的头部视图", @"日历", @"圆形验证码", @"随机图片验证码", @"带占位文本且自动换行的TextView", @"监听键盘高度的评论框", @"跑马灯效果"];
+        _titleArray = @[@"星星视图", @"多页面控制器的头部视图", @"日历", @"圆形验证码", @"随机图片验证码", @"带占位文本且自动换行的TextView", @"监听键盘高度的评论框", @"跑马灯效果", @"选择器"];
     }
     return _titleArray;
 }
 
 - (NSArray *)classNames {
     if (!_classNames) {
-        _classNames = @[@"StarViewTestController", @"SlideTitleViewTestController", @"CalendarViewTestController", @"ValidationCodeViewTestController", @"ValidationViewTestController", @"TextViewTestController", @"ReplyViewTestController", @"NNRunningLightController"];
+        _classNames = @[@"StarViewTestController", @"SlideTitleViewTestController", @"CalendarViewTestController", @"ValidationCodeViewTestController", @"ValidationViewTestController", @"TextViewTestController", @"ReplyViewTestController", @"NNRunningLightController", @"NNPickerViewController"];
     }
     return _classNames;
 }

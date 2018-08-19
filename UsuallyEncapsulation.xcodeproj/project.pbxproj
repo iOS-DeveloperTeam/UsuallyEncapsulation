@@ -38,6 +38,8 @@
 		C932FAB7BBF35C2E1428C53C /* libPods-UsuallyEncapsulation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FF1ED4AA247BE894A12B1E /* libPods-UsuallyEncapsulation.a */; };
 		E30A313E2111F2F40076152F /* NNRunningLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A313D2111F2F40076152F /* NNRunningLightView.m */; };
 		E30A31422111F3320076152F /* NNRunningLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A31412111F3320076152F /* NNRunningLightController.m */; };
+		E3FDFEBD21290C7600F7C411 /* NNPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDFEBC21290C7600F7C411 /* NNPickerView.m */; };
+		E3FDFEC121290D0C00F7C411 /* NNPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDFEC021290D0C00F7C411 /* NNPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		E30A313D2111F2F40076152F /* NNRunningLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNRunningLightView.m; sourceTree = "<group>"; };
 		E30A31402111F3320076152F /* NNRunningLightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNRunningLightController.h; sourceTree = "<group>"; };
 		E30A31412111F3320076152F /* NNRunningLightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNRunningLightController.m; sourceTree = "<group>"; };
+		E3FDFEBB21290C7600F7C411 /* NNPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNPickerView.h; sourceTree = "<group>"; };
+		E3FDFEBC21290C7600F7C411 /* NNPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNPickerView.m; sourceTree = "<group>"; };
+		E3FDFEBF21290D0C00F7C411 /* NNPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NNPickerViewController.h; sourceTree = "<group>"; };
+		E3FDFEC021290D0C00F7C411 /* NNPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NNPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +210,7 @@
 		6D47766520B44F2D00E2DA82 /* Encapsulation(封装) */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDFEBA21290C5F00F7C411 /* 选择器 */,
 				E30A313B2111F2F30076152F /* NNRunningLightView(跑马灯) */,
 				6D47766620B44F2D00E2DA82 /* MCalendar(日历) */,
 				6D47767020B44F2D00E2DA82 /* MReplyView(评论框) */,
@@ -289,6 +296,7 @@
 		6D47768320B44F2E00E2DA82 /* TestController(演示) */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDFEBE21290CFD00F7C411 /* 选择器 */,
 				E30A313F2111F3170076152F /* NNRunningLightView(跑马灯) */,
 				6D47768420B44F2E00E2DA82 /* Calendar(日历) */,
 				6D47768720B44F2E00E2DA82 /* MReplyView(评论框) */,
@@ -380,6 +388,24 @@
 				E30A31412111F3320076152F /* NNRunningLightController.m */,
 			);
 			path = "NNRunningLightView(跑马灯)";
+			sourceTree = "<group>";
+		};
+		E3FDFEBA21290C5F00F7C411 /* 选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDFEBB21290C7600F7C411 /* NNPickerView.h */,
+				E3FDFEBC21290C7600F7C411 /* NNPickerView.m */,
+			);
+			path = "选择器";
+			sourceTree = "<group>";
+		};
+		E3FDFEBE21290CFD00F7C411 /* 选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDFEBF21290D0C00F7C411 /* NNPickerViewController.h */,
+				E3FDFEC021290D0C00F7C411 /* NNPickerViewController.m */,
+			);
+			path = "选择器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,9 +570,11 @@
 				6D47769C20B44F2E00E2DA82 /* MDayCell.m in Sources */,
 				6D47764220B44D4900E2DA82 /* ViewController.m in Sources */,
 				6D4776AB20B44F2E00E2DA82 /* ValidationViewTestController.m in Sources */,
+				E3FDFEC121290D0C00F7C411 /* NNPickerViewController.m in Sources */,
 				6D47769E20B44F2E00E2DA82 /* MMonthView.m in Sources */,
 				6D47769A20B44F2E00E2DA82 /* MCalendarUtils.m in Sources */,
 				6D47769920B44F2E00E2DA82 /* BaseViewController.m in Sources */,
+				E3FDFEBD21290C7600F7C411 /* NNPickerView.m in Sources */,
 				6D4776A020B44F2E00E2DA82 /* MStarView.m in Sources */,
 				6D4776A920B44F2E00E2DA82 /* TextViewTestController.m in Sources */,
 				6D4776A720B44F2E00E2DA82 /* SlideTitleViewTestController.m in Sources */,
